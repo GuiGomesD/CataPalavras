@@ -328,6 +328,7 @@ body {
 
   .grid {
     grid-template-columns: repeat(7, 1fr);
+    width: 100%;
   }
 
   .dropzone {
@@ -368,7 +369,10 @@ body {
   }
 
   .grid {
-    grid-template-columns: repeat(100%, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+      grid-template-rows: repeat(3, 1fr);
+      column-gap: 1px;
+      height: 200px;
   }
 
   .dropzone {
@@ -376,6 +380,8 @@ body {
     height: 45px;
     font-size: 6vw;
     padding-top: 0px;
+    margin: 0px;
+    border-radius: 0px;
   }
 
   .btnHint {
