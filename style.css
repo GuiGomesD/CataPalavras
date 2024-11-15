@@ -247,13 +247,13 @@ body {
 }
 
 .dropzone {
-  display: inline-block;
   width: 80px;
   height: 90px;
   margin: 5px;
   text-align: center;
   display: flex;
   justify-content: center;
+  line-height: 40px;
   padding-top: 3%;
   background-color: var(--dropzone-bg-color);
   border: 3px solid var(--dropzone-border-color);
@@ -334,7 +334,6 @@ body {
     width: 10vw;
     height: 12vw;
     font-size: 6vw;
-    padding-top: 2%;
   }
 
   .sentenceBox {
@@ -342,7 +341,6 @@ body {
     width: 100%;
     border-radius: 0px;
   }
-
 }
 
 @media (max-width: 480px) {
