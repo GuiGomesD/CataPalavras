@@ -18,6 +18,7 @@
   --dropzone-border-color:  #585858;
   --highlight-color: #772CE8;
   --error-color: #FF5E5E;
+  --background-color: #1f1f1f;
 }
 
 body {
@@ -44,15 +45,25 @@ body {
 .startContainer {
   display: flex;
   flex-direction: column;
-  background-color: #1e1e1e;
   align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
   width: 100%;
   max-width: 500px;
   margin: 20px auto;
-  border-radius: 15px;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
-  color: white;
-  padding: 20px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 15px 30px var(--shadow-color);
+  color: var(--text-color);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.startContainer h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--primary-color);
 }
 
 .options {
@@ -72,31 +83,34 @@ body {
 }
 
 .themeSelector {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0px 0px 30px 0px;
+  margin-bottom: 30px;
 }
 
 .themeSelector label {
-  color: white;
-  margin-bottom: 10px;
+  color: var(--text-color);
   font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .themeSelector select {
+  width: 100%;
   padding: 12px;
   font-size: 16px;
   border-radius: 8px;
   border: 1px solid #333;
   background-color: #222;
-  color: white;
-  transition: background-color 0.3s ease;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
 .themeSelector select:hover {
   background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
 }
+
 
 .themeDisplay {
   text-align: center;
@@ -108,19 +122,12 @@ body {
   font-size: 24px;
 }
 
-.descricao {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  border-radius: 10px;
-}
-
 .descricao video {
   width: 100%;
   max-width: 480px;
-  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .explicacao {
@@ -154,11 +161,13 @@ body {
   background-color: #1e1e1e;
   border: 1px solid rgb(155, 155, 155);
   color: white;
+  border-radius: 8px;
   transition: 0.3s;
 }
 
 .playContainer:hover {
-  background-color: #111;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .container {
